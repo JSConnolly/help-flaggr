@@ -7,8 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<iframe src="http://socrates.devbootcamp.com" id="socrates" seamless></iframe>
-<%= yield %>
-
+<%= render 'layouts/iframe' %>
+<div class="help-container">
+  <button id="toggle">Show/Hide</button>
+  <%= yield %>
+</div>
 </body>
 </html>
