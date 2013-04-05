@@ -1,0 +1,5 @@
+<% if @user.errors.any? %>
+  $('div#errors').append("<p><%= @user.errors.full_messages %></p>");
+<% else %>
+  $('form.login').hide();
+<% end %>

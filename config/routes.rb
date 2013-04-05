@@ -1,4 +1,5 @@
 HelpFlaggr::Application.routes.draw do
+  root to: 'users#new' 
   resources :users, only: [:create, :destroy, :update]
   resources :help_requests, only: [:new, :create, :show, :destroy, :update]
   resources :tags, only: [:create, :show, :destroy]
