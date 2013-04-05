@@ -13,3 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+jQuery(document).ready(function () {
+  // jQuery("#IDofControlFiringResizeEvent").click(function () {
+    console.log($(window).height()); 
+    var height = $(window).height();
+    $('#socrates').height(height);
+   
+  
+});

@@ -1,6 +1,6 @@
 HelpFlaggr::Application.routes.draw do
   resources :users, only: [:create, :destroy, :update]
-  resources :help_requests, only: [:create, :show, :destroy, :update]
+  resources :help_requests, only: [:new, :create, :show, :destroy, :update]
   resources :tags, only: [:create, :show, :destroy]
 
 
