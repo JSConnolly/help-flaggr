@@ -1,4 +1,10 @@
 HelpFlaggr::Application.routes.draw do
+  resources :users, only: [:create, :destroy, :update]
+  resources :help_requests, only: [:create, :show, :destroy, :update]
+  resources :tags, only: [:create, :show, :destroy]
+
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
