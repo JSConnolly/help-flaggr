@@ -19,5 +19,8 @@ jQuery(document).ready(function () {
     var height = $(window).height();
     $('#socrates').height(height);
    
-  
+    $('#toggle').on('click', function(){
+      // e.prevent
+      $('.helpbox').toggle();
+    })
 });
