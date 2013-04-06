@@ -1,8 +1,9 @@
 HelpFlaggr::Application.routes.draw do
-  root to: 'users#new' 
+  root to: 'users#new'
   resources :users, only: [:new, :create, :destroy, :update]
   resources :help_requests, only: [:new, :create, :show, :destroy, :update]
   resources :tags, only: [:create, :show, :destroy]
+  match '/logout', to: 'users#destroy', via: :delete
 
 
 

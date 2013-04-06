@@ -2,4 +2,5 @@
   $('div#errors').append("<p><%= @user.errors.full_messages %></p>");
 <% else %>
   $('form.login').hide();
+  $('.help-container').html('<%= j render "help_requests/new", help_request: HelpRequest.new %>');
 <% end %>

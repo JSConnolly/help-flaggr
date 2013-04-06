@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
+  respond_to :js, :html
+
   def new
     @user = session[:user_id] ? User.find(session[:user_id]) : User.new
-    @help_requests = HelpRequest.where("complete = ?", false)
 
   end
 
@@ -15,9 +16,15 @@ class UsersController < ApplicationController
       else
         @user.phase = params[:user][:phase]
         @user.save
+
       end
       session[:user_id] = @user.id
     end
-    @user
+
+  end
+
+  def destroy
+    session.clear
+    @user = User.new
   end
 end

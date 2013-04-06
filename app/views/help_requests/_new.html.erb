@@ -1,0 +1,2 @@
+<%= render 'helpbox', help_request: HelpRequest.new %>
+<%= render 'givehelp', help_request: HelpRequest.where(complete: false)  %>
