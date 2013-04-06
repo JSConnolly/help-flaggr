@@ -1,3 +1,4 @@
+<% unless current_user %>
 <div id="errors"></div>
 <%= form_for @user, remote: true, method: :post, url: '/users', html: { class: "login" } do |f| %>
   <%= f.label :email %>
@@ -7,4 +8,9 @@
                          ['Phase Three', 3], ['Phase Four', 4], ['Teacher', -1],
                          ['Alum', 0]], selected: @user.phase )%>
   <%= f.submit %>
+<% end %>
+<% else %>
+
+<%= render 'help_requests/helpbox', help_request: HelpRequest.new %>
+
 <% end %>

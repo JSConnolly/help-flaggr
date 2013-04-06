@@ -1,12 +1,1 @@
-<div class="helpbox">
-  <h1>Get Help</h1>  
-  <%= form_for @help_request do |f| %>
-    <%= f.text_field :note, placeholder: "Describe problem" %>
-    <%= f.select :urgency, [['blue', 1], ['orange', 2], ['red', 3]], :prompt => 'Urgency'  %>
-    <%= f.submit "HELP" %>
-  <% end %>
-  <%= link_to logout_path %>
-</div>
-
-
-
+<%= render 'helpbox' %>

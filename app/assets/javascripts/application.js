@@ -23,4 +23,17 @@ jQuery(document).ready(function () {
       // e.prevent
       $('.helpbox').toggle();
     })
+    $('.help-container .tabs li a').on('click', function(){
+      
+      var box_div = $(this).attr('href');
+      console.log(box_div);
+      // $(box_div).show();
+      // $('#getbox').hide();
+      $(box_div).parent().children().hide();
+      $(box_div).show();
+    })
+    $('#exit').on('click', function(){
+      $('#givebox').hide();
+      $('#getbox').hide();
+    })
 });

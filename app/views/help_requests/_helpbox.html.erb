@@ -1,0 +1,19 @@
+
+<div id="getbox">
+
+  <h1>Get Help</h1>  
+  <%= form_for help_request do |f| %>
+    <%= f.text_field :note, placeholder: "Describe problem" %>
+    <%= f.select :urgency, [['blue', 1], ['orange', 2], ['red', 3]], :prompt => 'Urgency'  %>
+    <%= f.submit "HELP" %>
+  <% end %>
+<%= gravatar_for(current_user.email) %>  
+</div>
+
+<div id="givebox" style="display: none">
+  <h1>Give some muthaf***in help</h1>
+</div>
+
+
+
+
