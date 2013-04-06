@@ -19,8 +19,14 @@ jQuery(document).ready(function () {
     
     $(document).on('click', '#exit', function(){
       $('#helpbox').toggle();
-      // $('#givebox').hide();
-      // $('#getbox').hide();
+      $('a#exit').html('+');
+      $('a#exit').attr('id', 'popup')
+
+    });    
+    $(document).on('click', '#popup', function(){
+      $('#helpbox').toggle();
+      $('a#popup').html('x');
+      $('a#popup').attr('id', 'exit')
     });
    
 });
