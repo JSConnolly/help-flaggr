@@ -18,3 +18,16 @@ body {
 #socrates {
   width: 100%;
 }
+.requests, .current-request {
+	list-style-type: none;
+	padding-right: 10px;
+}
+#helpbox {
+	background:red;
+}
+#helpnote:hover {
+	background:white;
+}
+.current-request {
+	background:red
+}

@@ -2,7 +2,7 @@ class HelpRequestsController < ApplicationController
   respond_to :js, :html
   def new
     @help_request = HelpRequest.new
-    @help_requests = HelpRequest.where("complete = ?", false)
+    @help_requests = HelpRequest.where("complete = ?", false).sort {|a,b| b.created_at <=> a.created_at}
   end
   def show
     
