@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
   def new
     @user = session[:user_id] ? User.find(session[:user_id]) : User.new
+    @help_requests = HelpRequest.where("complete = ?", false)
+
   end
 
   def create

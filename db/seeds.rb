@@ -5,4 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-HelpRequest.create
+10.times do |i|
+  HelpRequest.create note: "#{i}alskdfdfjs", urgency: rand(1..3), complete: false
+end
+# <HelpRequest id: nil, note: nil, urgency: nil, complete: nil, teacher_id: nil, created_at: nil, updated_at: nil> 

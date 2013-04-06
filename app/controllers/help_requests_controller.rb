@@ -4,7 +4,7 @@ class HelpRequestsController < ApplicationController
     
   end
   def show
-    @help_requests = HelpRequest.all 
+    
   end
 
   def create
