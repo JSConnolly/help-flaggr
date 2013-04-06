@@ -6,5 +6,5 @@
   <%= f.select :phase, options_for_select([['Phase One', 1], ['Phase Two', 2], 
                          ['Phase Three', 3], ['Phase Four', 4], ['Teacher', -1],
                          ['Alum', 0]], selected: @user.phase )%>
-  <%= f.submit %>
+  <%= f.submit "Log in / Sign up" %>
 <% end %>

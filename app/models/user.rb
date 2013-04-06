@@ -5,4 +5,14 @@ class User < ActiveRecord::Base
 
   has_and_belongs_to_many :help_requests 
   belongs_to :help_request
+
+  # migrations
+    # t.string :email
+    # t.integer :phase
+    # t.timestamps
+    
+  # join table migration:
+    # c.integer :help_request_id
+    # c.integer :user_id
+    
 end
