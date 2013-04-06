@@ -1,7 +1,7 @@
 class HelpRequestsController < ApplicationController
   def new
     @help_request = HelpRequest.new
-    
+    @help_requests = HelpRequest.all
   end
   def show
     

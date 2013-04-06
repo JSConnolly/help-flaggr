@@ -2,7 +2,13 @@ class UsersController < ApplicationController
   respond_to :js, :html
 
   def new
-    @user = session[:user_id] ? User.find(session[:user_id]) : User.new
+    if current_user
+      @user = current_user
+      @help_requests = HelpRequest.all
+      redirect_to new_help_request_path
+    else
+      @user = User.new
+    end
   end
 
   def create
