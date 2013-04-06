@@ -9,8 +9,14 @@
 </head>
 <body>
   <%= render 'layouts/iframe' %>
-  <div class="help-container">
-      <%= yield %>
-  </div>
+
+  <div class="fixed-box">
+  	<div class="fixed-box-inner">
+	  	<div class="help-container">
+	    	  <%= yield %>
+	  	</div>
+		</div>
+	</div>
+
 </body>
 </html>

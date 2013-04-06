@@ -17,12 +17,8 @@ body {
   font-family: 'Noto Sans';
 }
 .help-container {
-  
   bottom: 0;
-  left: 40px;
   position: absolute;
-  
-  background: #eee;
 }
 .getbox, .givebox {
   width: 300px;
@@ -34,10 +30,10 @@ body {
 }
 .help-container {
   margin: 0;
-  background: #f5f5f5;
+
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
-  border: 1px solid #ccc;
+
 }
 .tabs {
   padding-left: 0;
@@ -69,4 +65,52 @@ body {
   background: #bf0004;
 }
 
+.fixed-box {
+  bottom: 0px;
+  position: fixed;
+  background: #ddd;
+  height: 40px;
+  width: 100%;
+}
+.fixed-box-inner {
+  width: 960px;
+  height: inherit;
+  margin: 0 auto;
+  position: relative;
+}
+#user input[type=text]{
+  border-radius: 3px;
+  padding: 3px;
+  border: 1px solid #606060;
+  font-size: 16px;
 
+}
+#user input[type=radio] {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  filter:alpha(opacity=0);
+  -moz-opacity:0;
+  -khtml-opacity: 0;
+  opacity: 0;
+}
+#user {
+  line-height: 40px;
+}
+#user span {
+  position: relative;
+  width: 30px;
+  display: inline-block;
+  height: 30px;
+  text-align: center;
+
+}
+#user #Teacher-signup{
+  width: 70px;
+
+}
+#user #Alum-signup {
+  width: 50px;
+}

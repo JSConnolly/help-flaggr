@@ -1,10 +1,16 @@
+<div id="user">
 <div id="errors"></div>
 <%= form_for @user, remote: true, method: :post, url: '/users', html: { class: "login" } do |f| %>
-  <%= f.label :email %>
-  <%= f.text_field :email %>
-  <%= f.label :phase %>
-  <%= f.select :phase, options_for_select([['Phase One', 1], ['Phase Two', 2], 
-                         ['Phase Three', 3], ['Phase Four', 4], ['Teacher', -1],
-                         ['Alum', 0]], selected: @user.phase )%>
+  <%= f.text_field :email, :placeholder => "email" %>
+  <% array = ["1", "2", "3", "4", "Teacher", "Alum"] %>
+  <% (0..5).each do |i| %>
+  	<span id="<%= array[i] %>-signup">
+	  	<%= f.label array[i]%>
+	  	<%= f.radio_button :phase, i %>
+  	</span>
+  <% end %>
+
   <%= f.submit "Log in / Sign up" %>
+
 <% end %>
+</div>
