@@ -27,6 +27,18 @@ jQuery(document).ready(function () {
       $('#helpbox').toggle();
       $('a#popup').html('x');
       $('a#popup').attr('id', 'exit')
+
     });
-   
+   $('#givebox').on('click', '#complete', function(){
+      console.log(this)
+      var helpNote = $(this).closest('#helpnote');
+      helpNote.fadeOut();
+      var id = $(this).siblings().text();
+      console.log(id);
+      $.ajax({
+        type: "PUT",
+        url: id,
+        data: helpNote
+      })
+   })
 });

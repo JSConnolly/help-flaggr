@@ -1,7 +1,10 @@
 
 <div id="givebox" style="display: none">
   <%= link_to "Log Out", logout_path, method: :delete, remote: true %>
-<%= @help_requests.each do |help| %>
-<%= help.note %>
+<ul>
+<% @help_requests.each do |help| %>
+<li id="helpnote"><span id="noteid"><%=help.id %></span> <%= help.note %>  Urgency: <%= help.urgency %> Complete: <%= check_box_tag 'complete' %></li>
+</ul>
 <% end %>
 </div>
+
