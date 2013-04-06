@@ -3,9 +3,11 @@
   <h1>Get Help</h1>  
   <%= form_for :help_request, url: help_requests_path, remote: true do |f| %>
     <%= f.text_field :note, placeholder: "Describe problem" %>
+    <input type="text", name="tag_content", id="tags" placeholder="tags">
     <%= f.select :urgency, [['blue', 1], ['orange', 2], ['red', 3]], :prompt => 'Urgency'  %>
     <%= f.submit "HELP" %>
   <% end %>
+
 <%= gravatar_for(current_user.email) %>  
 </div>
 
