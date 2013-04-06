@@ -11,6 +11,11 @@ class HelpRequestsController < ApplicationController
   def create
     @help_request = HelpRequest.create(params[:help_request])
     @help_request.users << current_user
+
+    @tags = Tag.parse_tags(params[:tag_content], @help_request.id)
+    @tags.each do |t|
+      @help_request.tags << t
+    end
   end
 
   def destroy

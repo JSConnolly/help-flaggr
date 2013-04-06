@@ -3,9 +3,9 @@
 <%= form_for @user, remote: true, method: :post, url: '/users', html: { class: "login" } do |f| %>
   <%= f.text_field :email, :placeholder => "email" %>
   <% array = ["1", "2", "3", "4", "Teacher", "Alum"] %>
-  <% (0..5).each do |i| %>
-  	<span id="<%= array[i] %>-signup">
-	  	<%= f.label array[i]%>
+  <% (1..6).each do |i| %>
+  	<span id="signup-<%= array[i-1].downcase %>">
+	  	<%= f.label array[i-1]%>
 	  	<%= f.radio_button :phase, i %>
   	</span>
   <% end %>

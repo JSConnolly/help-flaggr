@@ -1,3 +1,7 @@
 <div id="tagbox">
-  
+  <ul id="taglist">
+    <% tags.each do |t| %>
+      <li><small><%= t.content %></small></li>
+    <% end %>
+  </ul>
 </div>
