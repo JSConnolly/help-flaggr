@@ -13,27 +13,4 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-jQuery(document).ready(function () {
-  // jQuery("#IDofControlFiringResizeEvent").click(function () {
-    console.log($(window).height()); 
-    var height = $(window).height();
-    $('#socrates').height(height);
-   
-    $('#toggle').on('click', function(){
-      // e.prevent
-      $('.helpbox').toggle();
-    })
-    $('.help-container .tabs li a').on('click', function(){
-      
-      var box_div = $(this).attr('href');
-      console.log(box_div);
-      // $(box_div).show();
-      // $('#getbox').hide();
-      $(box_div).parent().children().hide();
-      $(box_div).show();
-    })
-    $('#exit').on('click', function(){
-      $('#givebox').hide();
-      $('#getbox').hide();
-    })
-});
+

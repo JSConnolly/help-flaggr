@@ -1,2 +1,5 @@
-<%= render 'helpbox', help_request: HelpRequest.new %>
-<%= render 'givehelp', help_request: HelpRequest.where(complete: false)  %>
+<%= render 'layouts/tabs' %>
+<div id="helpbox">
+  <%= render 'help_requests/helpbox', help_request: HelpRequest.new %>
+  <%= render 'help_requests/givehelp'  %>
+</div>

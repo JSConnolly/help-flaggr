@@ -3,7 +3,6 @@ class UsersController < ApplicationController
 
   def new
     @user = session[:user_id] ? User.find(session[:user_id]) : User.new
-
   end
 
   def create
@@ -20,6 +19,7 @@ class UsersController < ApplicationController
       end
       session[:user_id] = @user.id
     end
+      @help_requests = HelpRequest.where(complete: false)
 
   end
 
