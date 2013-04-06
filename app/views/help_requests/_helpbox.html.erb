@@ -1,8 +1,7 @@
-
 <div id="getbox">
 
   <h1>Get Help</h1>  
-  <%= form_for help_request do |f| %>
+  <%= form_for :help_request, url: help_requests_path, remote: true do |f| %>
     <%= f.text_field :note, placeholder: "Describe problem" %>
     <%= f.select :urgency, [['blue', 1], ['orange', 2], ['red', 3]], :prompt => 'Urgency'  %>
     <%= f.submit "HELP" %>

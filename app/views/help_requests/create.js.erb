@@ -1,0 +1,5 @@
+<% if @help_request.errors.any? %>
+  $('div#errors').html("<p><%= @help_request.errors.full_messages %></p>");
+<% else %>
+$('.help-container').html('<%= j render "help_requests/show" %>');
+<% end %>

@@ -1,0 +1,9 @@
+<ul>
+  <li>Gravatar</li>
+  <li>Color</li>
+  <% if @help_request.users.first.id == current_user.id %>
+    <li>Cancel</li>
+  <% else %>
+    <li>Checkbox</li>
+  <% end %>
+</ul>

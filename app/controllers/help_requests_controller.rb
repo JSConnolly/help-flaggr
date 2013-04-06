@@ -9,7 +9,7 @@ class HelpRequestsController < ApplicationController
 
   def create
     @help_request = HelpRequest.create(params[:help_request])
-    redirect_to :back
+    @help_request.users << current_user
   end
 
   def destroy
