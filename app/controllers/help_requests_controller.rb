@@ -1,4 +1,5 @@
 class HelpRequestsController < ApplicationController
+  respond_to :js, :html
   def new
     @help_request = HelpRequest.new
     @help_requests = HelpRequest.all
@@ -13,6 +14,7 @@ class HelpRequestsController < ApplicationController
   end
 
   def destroy
-    
+    HelpRequest.destroy(params[:id])
+    @help_requests = HelpRequest.all
   end
 end

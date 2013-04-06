@@ -5,7 +5,7 @@
   <li><%= gravatar_for(current_user.email) %></li>
   <li>Color</li>
   <% if @help_request.users.first.id == current_user.id %>
-    <li>Cancel</li>
+    <li>  <%= link_to "Cancel", "/help_requests/#{@help_request.id}", method: :delete, remote: true %></li>
   <% else %>
     <li>Checkbox</li>
   <% end %>
