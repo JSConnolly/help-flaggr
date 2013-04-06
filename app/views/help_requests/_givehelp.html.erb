@@ -4,7 +4,7 @@
 <ul>
 <% @help_requests.each do |help| %>
 <li id="helpnote"><span id="noteid"><%=help.id %></span> <%= help.note %>  Urgency: <%= help.urgency %> Complete: <%= check_box_tag 'complete' %></li>
-</ul>
 <% end %>
+</ul>
 </div>
 
