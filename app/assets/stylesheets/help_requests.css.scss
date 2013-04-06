@@ -9,6 +9,10 @@ body {
   left: 0;
   position: absolute;
 
+  ul {
+    list-style:none;
+  }
+
 }
 .help-box {
   width: 300px;
@@ -17,4 +21,19 @@ body {
 
 #socrates {
   width: 100%;
+}
+
+#taglist ul {
+  list-style: none;
+  display:inline;
+}
+
+small{
+  font-size: .7em;
+  float:left;
+  background: red;
+  color:white;
+  margin-right: 0.5em;
+  margin-bottom:.25em;
+  padding: 0 0.25em;
 }
