@@ -23,6 +23,7 @@ body {
 .getbox, .givebox {
   width: 300px;
   height: 200px;
+  background: red;
 }
 
 #socrates {
@@ -87,7 +88,7 @@ body {
 }
 #user input[type=radio] {
   width: 30px;
-  height: 30px;
+  height: 40px;
   position: absolute;
   left: 0;
   top: 0;
@@ -95,15 +96,59 @@ body {
   -moz-opacity:0;
   -khtml-opacity: 0;
   opacity: 0;
+  margin: 0;
+  background-color: red;
+  
+}
+#user #signup-1 {
+  background: red;
+}
+#user #signup-2 {
+  background: green; 
+}
+#user #signup-3 {
+  background: orange;
+}
+#user #signup-4 {
+  background: white;
+}
+#user #signup-teacher {
+  background: #660000;
+}
+#user #signup-alum {
+  background: blue;
+}
+#user input[type=radio]:checked {
+  border: 3px solid red;
+ 
+}
+#user #signup-teacher input[type=radio]{
+  width: 61px;
+}
+#user #signup-alum input[type=radio] {
+  width: 40px;
 }
 #user {
   line-height: 40px;
 }
-#user span {
-  position: relative;
+#user label {
+
   width: 30px;
+  height: 40px;
+
   display: inline-block;
-  height: 30px;
+}
+#user #signup-teacher label,
+#user #signup-alum label{
+  width: inherit;
+  height: inherit;
+}
+#user span {
+  line-height: 40px;
+  position: relative;
+
+  display: inline-block;
+
   text-align: center;
 
 }

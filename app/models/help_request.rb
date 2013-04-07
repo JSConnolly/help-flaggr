@@ -15,5 +15,23 @@ class HelpRequest < ActiveRecord::Base
   # join table migration:
     # c.integer :help_request_id
     # c.integer :user_id
-    
+
+
+  def self.complete_all
+    HelpRequest.over_twenty_four_hours.each do |request|
+      request.complete_one
+      request.save
+    end
+  end
+
+  def complete_one
+    self.complete = true
+  end
+
+  private
+  
+  def self.over_twenty_four_hours
+    HelpRequest.where("created_at <= ?", 1.second.ago)
+  end 
+
 end
