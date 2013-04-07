@@ -5,7 +5,7 @@
     <%= f.text_field :note, placeholder: "Describe problem" %>
     <input type="text", name="tag_content", id="tags" placeholder="tags">
     <%= f.select :urgency, [['blue', 1], ['orange', 2], ['red', 3]], :prompt => 'Urgency'  %>
-    <%= f.submit "HELP" %>
+    <%= f.submit "HELP", :id => "help" %>
   <% end %>
 
 <%= gravatar_for(current_user.email) %>  

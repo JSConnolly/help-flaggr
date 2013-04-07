@@ -1,13 +1,16 @@
 <%= link_to "Log Out", logout_path, method: :delete, remote: true %>
 
-
+<div class="current-request"
 <ul>
   <li><%= gravatar_for(current_user.email) %></li>
-  <li>Color</li>
+  <li id="color">Color</li>
   <% if @help_request.users.first.id == current_user.id %>
     <li>  <%= link_to "Cancel", "/help_requests/#{@help_request.id}", method: :delete, remote: true %></li>
   <% else %>
     <li>Checkbox</li>
   <% end %>
 </ul>
+
+</div>
 <%= render 'help_requests/tagbox', tags: @help_request.tags %>
+
