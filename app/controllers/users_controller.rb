@@ -31,8 +31,9 @@ class UsersController < ApplicationController
   end
 
   def destroy
+    current_user
     session.clear
     @user = User.new
-    redirect_to root_path
+
   end
 end

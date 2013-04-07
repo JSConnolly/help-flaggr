@@ -17,7 +17,7 @@ class HelpRequestsController < ApplicationController
 
   def destroy
     HelpRequest.destroy(params[:id])
-    @help_requests = HelpRequest.where(:complete => false)
+    @help_requests = HelpRequest.incomplete
   end
 
   def update
@@ -29,7 +29,7 @@ class HelpRequestsController < ApplicationController
   def user_update
     help_request = HelpRequest.find(params[:id])
     help_request.update_attributes(:complete => true)
-    @help_requests = HelpRequest.where(:complete => false)
+    @help_requests = HelpRequest.incomplete
   end
 
   def fetch_length

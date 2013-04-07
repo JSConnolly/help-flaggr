@@ -2,14 +2,14 @@
 // All this logic will automatically be available in application.js.
 
 $(function(){
-	$("#user input[type=radio]").click(function(){
+	$(document).on('click', '#user input[type=radio]', function(){
 		$("#user label").css("background", "none");
 		$(this).parent().children().css("background", "yellow");
 	});
 });
 
 $(function(){
-	$("#helpbox input[type=radio]").click(function(){
+	$(document).on('click', '#helpbox input[type=radio]', function(){
 		$("#helpbox span").css("border", "none");
 		$(this).parent().css("border", "3px solid yellow");
 	});
