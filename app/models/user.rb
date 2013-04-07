@@ -14,5 +14,7 @@ class User < ActiveRecord::Base
   # join table migration:
     # c.integer :help_request_id
     # c.integer :user_id
-    
+
+
+  
 end
