@@ -28,6 +28,10 @@ class HelpRequest < ActiveRecord::Base
     self.complete = true
   end
 
+  def self.incomplete
+    HelpRequest.find(:all, :conditions => ["complete = ?", false] )
+  end
+
   private
   
   def self.over_twenty_four_hours
