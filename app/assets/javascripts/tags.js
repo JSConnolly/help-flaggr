@@ -16,6 +16,22 @@ jQuery(document).ready(function () {
       $(box_div).parent().children().hide();
       $(box_div).show();
     });
+
+    $(document).on('click', '#request_permission', function(e){
+      e.preventDefault();
+      console.log("alsdjhf");
+      if (window.webkitNotifications) 
+      {
+        console.log("hi");
+      }
+      else 
+      {
+        window.webkitNotifications.requestPermission();
+      }
+      });
+
+
+
     
     $(document).on('click', '#exit', function(){
       $('#helpbox').toggle();

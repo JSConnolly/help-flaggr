@@ -1,4 +1,6 @@
 <div id="getbox">
+  <%=link_to "Request Permission", '/', :id => 'request_permission' %>
+
 <%= link_to "Log Out", logout_path, method: :delete, remote: true %>
   <h1>Get Help</h1>  
   <%= form_for :help_request, url: help_requests_path, remote: true do |f| %>
