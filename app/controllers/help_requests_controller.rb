@@ -4,10 +4,7 @@ class HelpRequestsController < ApplicationController
     @help_request = HelpRequest.new
     @help_requests = HelpRequest.where("complete = ?", false).sort {|a,b| b.created_at <=> a.created_at}
   end
-  def show
-    
-  end
-
+ 
   def create
     @help_request = HelpRequest.create(params[:help_request])
     @help_request.users << current_user
@@ -20,19 +17,19 @@ class HelpRequestsController < ApplicationController
 
   def destroy
     HelpRequest.destroy(params[:id])
-    @help_requests = HelpRequest.all
+    @help_requests = HelpRequest.where(:complete => false)
   end
 
   def update
     @help_request = HelpRequest.find(params[:id])
     @help_request.update_attributes(:complete => true)
-    render :json => ""
+    render :nothing
   end
 
   def user_update
     help_request = HelpRequest.find(params[:id])
     help_request.update_attributes(:complete => true)
-    @help_requests = HelpRequest.all
+    @help_requests = HelpRequest.where(:complete => false)
   end
 
   def fetch_length

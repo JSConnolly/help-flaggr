@@ -32,7 +32,7 @@ jQuery(document).ready(function () {
     $('.current-request').css('background-color', 'blue');
   })
  
- $('#givebox').on('click', '#complete', function(){
+ $(document).on('click', '#complete', function(){
     console.log(this)
     var helpNote = $(this).closest('#helpnote');
     helpNote.fadeOut();

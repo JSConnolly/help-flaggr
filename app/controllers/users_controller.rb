@@ -4,11 +4,12 @@ class UsersController < ApplicationController
   def new
     if current_user
       @user = current_user
-      @help_requests = HelpRequest.all
+      @help_requests = HelpRequest.where(complete: false)
       redirect_to new_help_request_path
     else
       @user = User.new
     end
+
   end
 
   def create
@@ -32,5 +33,6 @@ class UsersController < ApplicationController
   def destroy
     session.clear
     @user = User.new
+    redirect_to root_path
   end
 end
