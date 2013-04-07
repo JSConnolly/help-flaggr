@@ -3,7 +3,7 @@
   <%= link_to "Log Out", logout_path, method: :delete, remote: true %>
 <ul class="requests">
 <% @help_requests.each do |help| %>
-<li id="helpnote"><span id="noteid" style="display:none"><%=help.id %></span> <%= help.note %>  Urgency: <%= help.urgency %> Complete: <%= check_box_tag 'complete' %></li>
+  <%= render 'help_requests/help_item', help_item: help %>
 <% end %>
 </ul>
 </div>

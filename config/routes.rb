@@ -4,6 +4,7 @@ HelpFlaggr::Application.routes.draw do
   resources :help_requests, only: [:new, :create, :show, :destroy, :update]
   resources :tags, only: [:create, :show, :destroy]
   match '/logout', to: 'users#destroy', via: :delete
+  match '/help_requests/user_update/:id', to: 'help_requests#user_update', via: :put
 
 
 

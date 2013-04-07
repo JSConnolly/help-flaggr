@@ -28,4 +28,22 @@ class HelpRequestsController < ApplicationController
     @help_request.update_attributes(:complete => true)
     render :json => ""
   end
+
+  def user_update
+    help_request = HelpRequest.find(params[:id])
+    help_request.update_attributes(:complete => true)
+    @help_requests = HelpRequest.all
+  end
+
+  def fetch_length
+    HelpRequest.all.length
+  end
+
+  # def fetch_last
+  #   { render_text "htmlcodeinhere" }
+  # end
+
+  def fetch_latest
+    HelpRequest.last
+  end
 end
