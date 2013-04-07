@@ -7,3 +7,10 @@ $(function(){
 		$(this).parent().children().css("background", "yellow");
 	});
 });
+
+$(function(){
+	$("#helpbox input[type=radio]").click(function(){
+		$("#helpbox span").css("border", "none");
+		$(this).parent().css("border", "3px solid yellow");
+	});
+});

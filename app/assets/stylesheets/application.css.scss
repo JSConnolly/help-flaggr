@@ -79,6 +79,42 @@ body {
   margin: 0 auto;
   position: relative;
 }
+#helpbox span {
+  line-height: 40px;
+  position: relative;
+  width: 40px;
+  display: inline-block;
+
+  text-align: center;
+}
+#helpbox label {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+
+}
+#helpbox #help-1 {
+  background: blue;
+}
+#helpbox #help-2 {
+  background: orange;
+}
+#helpbox #help-3 {
+  background: red;
+}
+#helpbox input[type=radio] {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  filter:alpha(opacity=0);
+  -moz-opacity:0;
+  -khtml-opacity: 0;
+  opacity: 0;
+  margin: 0;
+}
+
 #user input[type=text]{
   border-radius: 3px;
   padding: 3px;
@@ -97,8 +133,6 @@ body {
   -khtml-opacity: 0;
   opacity: 0;
   margin: 0;
-  background-color: red;
-  
 }
 #user #signup-1 {
   background: red;

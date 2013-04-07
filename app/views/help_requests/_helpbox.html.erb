@@ -4,7 +4,17 @@
   <%= form_for :help_request, url: help_requests_path, remote: true do |f| %>
     <%= f.text_field :note, placeholder: "Describe problem" %>
     <input type="text", name="tag_content", id="tags" placeholder="tags">
-    <%= f.select :urgency, [['blue', 1], ['orange', 2], ['red', 3]], :prompt => 'Urgency'  %>
+    <h4>Urgency</h4>
+    <% array = ["1", "2", "3"] %>
+ 
+	  <% (1..3).each do |i| %>
+	  	<span id="help-<%= array[i-1].downcase %>">
+		  	<%= f.label array[i-1]%>
+		  	<%= f.radio_button :urgency, i %>
+	  	</span>
+	  <% end %>
+
+   <!--  f.select :urgency, [['blue', 1], ['orange', 2], ['red', 3]], :prompt => 'Urgency'  -->
     <%= f.submit "HELP", :id => "help" %>
   <% end %>
 
