@@ -1,57 +1,21 @@
-// Place all the styles related to the help_requests controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-body {
+ul.tabs {
+  list-style-type: none;
   margin: 0;
-}
-.help-container {
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  background-color: #fff;
-  border: 1px solid #ff3300;
-
-  ul {
-    list-style:none;
-  }
-
-}
-.help-box {
-  width: 300px;
-  height: 200px;
+  padding: 0;
 }
 
-#socrates {
-  width: 100%;
+.tabs li {
+  display: inline;
+  margin-right: 20px;
 }
 
-.requests, .current-request {
-	list-style-type: none;
-	padding-right: 10px;
-}
-#helpbox {
-	background:red;
-}
-#helpnote:hover {
-	background:white;
-}
-.current-request {
-	background:red
-}
-
-
-#taglist ul {
-  list-style: none;
-  display:inline;
-}
-
-small{
-  font-size: .7em;
+#getbox input[type=text] {
+  border-radius: 5px;
+  height: 34px;
+  width: 200px;
+  margin-top: -8px;
+  padding: 10px 0 10px 10px;
   float:left;
-  background: red;
-  color:white;
-  margin-right: 0.5em;
-  margin-bottom:.25em;
-  padding: 0 0.25em;
-}
 
+  margin-right:20px;
+}

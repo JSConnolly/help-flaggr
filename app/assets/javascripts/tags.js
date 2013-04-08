@@ -45,9 +45,7 @@ jQuery(document).ready(function () {
     $('a#popup').attr('id', 'exit')
 
   });
-  $('#help').on('click', '.current-request', function(){
-    $('.current-request').css('background-color', 'blue');
-  })
+
  
  $('#givebox').on('click', '#complete', function(){
     console.log(this)

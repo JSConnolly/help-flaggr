@@ -1,0 +1,66 @@
+body {
+  font-size: 18px;
+}
+
+.fixed-box {
+  background-color: #ff3300;
+  width: 100%;
+  position: fixed;
+  bottom: 100px;
+  padding: 10px 0 15px 16px;
+  left: 0;
+}
+
+  .fixed-box p {
+    line-height: 0;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+.login input[type=text] {
+  border-radius: 5px;
+  height: 34px;
+  width: 200px;
+  margin-top: -8px;
+  padding: 10px 0 10px 10px;
+  float:left;
+
+  margin-right:20px;
+}
+
+.login input[type=radio] {
+  color: blue;
+}
+
+  .phase p {
+    line-height: 0;
+    font-weight: bold;
+    }
+
+  .login a {
+    text-decoration:none;
+    color:#fff;
+  }
+
+input[type=submit] {
+  border-radius: 5px;
+  font-size: 18px;
+  width: 100px;
+  height: 50px;
+  height: 42px;
+  padding-top: 7px;
+}
+
+
+#signup-1, #signup-2, #signup-3, #signup-4, #signup-teacher, #signup-alum {
+  background-color: #0000ff;
+  text-align: center;
+  margin-right: 10px;
+  border-radius: 5px;
+
+  padding-right:18px;
+  padding-left: 20px;
+  padding-bottom: 6px;
+  padding-top: 14px;
+
+  }

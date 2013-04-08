@@ -2,15 +2,19 @@
 <html>
 <head>
   <title>HelpFlaggr</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+
+  <%= stylesheet_link_tag    "login", :media => "all" %>
+  <%= stylesheet_link_tag    "help_requests", :media => "all" %>
+
+
   <%= javascript_include_tag "application" %>
-  <%= javascript_include_tag "notifications" %>
+  <%= javascript_include_tag "tags" %>
 
   <%= csrf_meta_tags %>
   <link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
 </head>
 <body>
-  <%= render 'layouts/iframe' %>
+  <!-- <%= render 'layouts/iframe' %> -->
 
   <div class="fixed-box">
   	<div class="fixed-box-inner">
